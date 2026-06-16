@@ -448,7 +448,7 @@
 // ╔═══════════════════════════════════════════════════════════╗
 // ║  ⚙  CONFIGURATION — EDIT BEFORE GOING LIVE               ║
 // ╚═══════════════════════════════════════════════════════════╝
-const SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwn1jtdYtHArTyVr0BFnE70ftxHa6gtzrUJb3KO-ERSb8T_u9I_TuHXe4w9ulRwsJpW1A/exec';
 //  ↑ Replace with your Google Apps Script Web App URL after deploying Code.gs
 
 
@@ -1031,7 +1031,7 @@ function submitForm() {
   clearErr(4);
   if (!validate(4)) return;
 
-  if (SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL_HERE') {
+  if (SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbwn1jtdYtHArTyVr0BFnE70ftxHa6gtzrUJb3KO-ERSb8T_u9I_TuHXe4w9ulRwsJpW1A/exec') {
     alert('Setup required: please replace SCRIPT_URL at the top of form.html with your Google Apps Script URL.\n\nSee the setup instructions in Code.gs.');
     return;
   }
