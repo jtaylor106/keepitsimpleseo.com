@@ -272,8 +272,8 @@
         </div>
       </div>
       <div class="field">
-        <label class="lbl" for="f-addr">Business Address</label>
-        <p class="hint">Full address including city, state, and ZIP. Skip if you are home-based and prefer not to show your address publicly on Google.</p>
+        <label class="lbl" for="f-addr">Business Address <span id="addr-req" class="req" style="display:none">*</span></label>
+        <p class="hint" id="addr-hint">Full address including city, state, and ZIP. Skip if you are home-based and prefer not to show your address publicly on Google.</p>
         <input type="text" id="f-addr" placeholder="123 Main St, Springfield, IL 62701" autocomplete="street-address">
       </div>
       <div class="field">
@@ -887,7 +887,15 @@ document.addEventListener('change', function(e) {
 // Location type highlighting (static radio group in Step 1)
 document.getElementById('grp-loc').addEventListener('change', function(e) {
   this.querySelectorAll('.opt').forEach(o => o.classList.remove('sel'));
-  if (e.target.type === 'radio') e.target.closest('.opt').classList.add('sel');
+  if (e.target.type === 'radio') {
+    e.target.closest('.opt').classList.add('sel');
+    const needsAddr = e.target.value.startsWith('Yes') || e.target.value.startsWith('Both');
+    document.getElementById('addr-req').style.display = needsAddr ? '' : 'none';
+    document.getElementById('addr-hint').textContent = needsAddr
+      ? 'Required. Full address including city, state, and ZIP.'
+      : 'Full address including city, state, and ZIP. Skip if you are home-based and prefer not to show your address publicly on Google.';
+    document.getElementById('f-addr').classList.remove('err');
+  }
 });
 
 // ──────────────────────────────────────────────────────────
@@ -939,6 +947,9 @@ function validate(step) {
       if (empty) ok = false;
     });
     if (!document.querySelector('input[name="loctype"]:checked')) ok = false;
+    const locVal = (document.querySelector('input[name="loctype"]:checked') || {}).value || '';
+    const addrRequired = locVal.startsWith('Yes') || locVal.startsWith('Both');
+    if (addrRequired && !document.getElementById('f-addr').value.trim()) { document.getElementById('f-addr').classList.add('err'); ok = false; }
     const anyDay = DAYS.some(d => document.getElementById('dchk-' + d.id).checked);
     if (!ok || !anyDay) { showErr(1); return false; }
     return true;
