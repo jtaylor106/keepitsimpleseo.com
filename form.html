@@ -267,6 +267,11 @@
         <input type="url" id="f-web" placeholder="https://www.yourbusiness.com">
       </div>
       <div class="field">
+        <label class="lbl" for="f-social">Social Media Pages</label>
+        <p class="hint">Share links to any social profiles you'd like included — Facebook, Instagram, X (Twitter), etc. Leave blank if you don't have any.</p>
+        <textarea id="f-social" placeholder="https://facebook.com/yourbusiness&#10;https://instagram.com/yourbusiness"></textarea>
+      </div>
+      <div class="field">
         <label class="lbl">Do customers come to your physical location? <span class="req">*</span></label>
         <div class="opt-group" id="grp-loc">
           <label class="opt"><input type="radio" name="loctype" value="Yes — I have a storefront or office customers visit"><span class="opt-text">Yes — I have a storefront or office customers visit</span></label>
@@ -1032,6 +1037,7 @@ function collectData() {
     email:          document.getElementById('f-email').value.trim(),
     phone:          document.getElementById('f-phone').value.trim(),
     website:        document.getElementById('f-web').value.trim(),
+    socialMedia:    document.getElementById('f-social').value.trim(),
     locationType:   (document.querySelector('input[name="loctype"]:checked') || {}).value || '',
     address:        document.getElementById('f-addr').value.trim(),
     serviceArea:    document.getElementById('f-area').value.trim(),
