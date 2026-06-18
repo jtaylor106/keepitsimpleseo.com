@@ -1,14 +1,157 @@
+
+All projects
+FrontDoor Profile
+You are a small business consultant. I am thinking of starting a business called FrontDoor Profile. It will only provide Google Business Profile set up and management fees. The set up fee will be one-time $129 and the optional monthly management will be $39 per month, including 4 posts, response to reviews and 3 updates a month. I thought GBP was had the ROI for setting up when considering all SEO services. So instead of paying an agency $500 to $1,000 per month for services the company doesn’t need, this will make them look professional online and improve their ranking. The target audience are small businesses under 5 employees without a dedicated marketing budget. The workflow will be the company receives a questionnaire asking basic company information like name, email, phone number, website but also an industry specific form asking services provided, area provided, menu, etc. but different questions based on the industry. The form will pre-fill with the likely services based on research of websites in their industry. This form will then be used to generate their GBP. There will be instructional videos and guides to onboard clients and be added to their GBP. The set up and management of the GBPs will tried to be optimized as much as possible with AI assistance. This is meant to be a part time job so should take no more than 20 hours per week. Pricing is meant to be low to attract new customers and kept low since it is not needed to maintain lifestyle.
+Show more
+
+
+
+How can I help you today?
+
+
+Project-wide consistency and completeness audit
+Last message 4 minutes ago
+Update FrontDoor tracker with contact fields and split clicks metric
+Last message 4 hours ago
+Targeted edits to FrontDoor service agreement
+Last message 4 hours ago
+Updating FrontDoor-Profile-SOP.md monthly email sections
+Last message 4 hours ago
+Update FrontDoor business plan documentation
+Last message 16 hours ago
+Index.html targeted edits and updates
+Last message 18 hours ago
+Targeted edits to checkin.html
+Last message 19 hours ago
+Form.html targeted edits and updates
+Last message 19 hours ago
+Google Apps Script update for dual-form data routing
+Last message 20 hours ago
+Project file review and backend integration setup
+Last message yesterday
+Google Business Profile service agreement and tracking tools
+Last message yesterday
+Monthly client form for Google Business updates
+Last message 2 days ago
+Prompt attachment review
+Last message 2 days ago
+Competitive positioning against Localo's pricing
+Last message 2 days ago
+Competitive positioning against Localo's pricing
+Last message 2 days ago
+Complete SOP document with template variables
+Last message 2 days ago
+Google Business Account setup and maintenance SOPs
+Last message 2 days ago
+Conditional required field for business address
+Last message 2 days ago
+Form submission error troubleshooting
+Last message 2 days ago
+Google Forms business hours checkbox with time inputs
+Last message 2 days ago
+Update business plan setup fee to $129
+Last message 2 days ago
+Business plan for Google Business Profile management service
+Last message 2 days ago
+Keep It Simple SEO business launch plan
+Last message 3 days ago
+Memory
+Only you
+Purpose & context JT runs FrontDoor Profile, a solo, part-time service business offering Google Business Profile (GBP) setup ($129 one-time) and monthly management ($39/month) for small local businesses — typically under five employees with no dedicated marketing staff. The management tier covers four posts/month, all review responses, and up to three profile updates. The business is designed to stay under roughly 20 hours/week alongside other commitments, with AI-assisted drafting and human review as the core delivery model. Long-term sustainability depends on compressing time-per-client through systematized workflows and automation. A tiered pricing structure (rather than flat price hikes) is the planned path for future growth. The current price point is treated as a client acquisition strategy with a planned increase once social proof is established. JT has limited coding experience, uses Google Workspace and Google Colab, and hosts the site on GitHub Pages with a custom domain (frontdoorprofile.com). The brand is "FrontDoor Profile" formally, "Front Door Profile" on business cards and emails. Current state The full project stack is built and has been audited: index.html — marketing site form.html — custom HTML client intake form (replaced a prior Google Form), submits JSON to a Google Apps Script endpoint, routes to a Google Sheet (Intake tab) checkin.html — monthly client check-in form (holiday hours, events, post preferences), same submission pattern; needs SCRIPTURL placeholder filled before deploying; public URL is a placeholder in the recap email pending hosting confirmation Google Apps Script backend — single endpoint routing to two tabs (Intake, Monthly) in one Google Sheet; file has a .docx extension but is plain UTF-8 text FrontDoor-Profile-SOP.md (v1.1) — covers six-phase setup, monthly maintenance cycle, pre-handoff QA checklist, six canned emails, six AI prompt templates, industry-to-GBP-category lookup, two client-facing guides, Google Organization account setup (Section 1A), and offboarding (Phase G, seven business days) FrontDoor-Profile-Business-Plan.md — updated to $129 setup fee throughout, with all downstream calculations revised FrontDoor-Service-Agreement.docx — plain text despite extension; rebuilt as eSign-compatible with 10 numbered sections (scope, IP, confidentiality with two-year survival, binding arbitration, ALL CAPS disclaimers); offboarding aligned to seven business days to match SOP; amber instruction box for Google Workspace eSign activation FrontDoor-Monthly-Recap-Email.md — single mid-month send (15th) recapping prior month and collecting upcoming-month input; no separate start-of-month email; GBP stats (Views, Clicks, Direction Requests) embedded directly; references checkin.html; SOP Section 5F retired in favor of this template FrontDoorKPITracker.xlsx — genuine Excel file; five tabs (Client Roster, Setup Log, Management Log, Dashboard, Profile Stats); 1,110 working formulas; Dashboard auto-calculates MRR, conversion rate, churn, total revenue, effective hourly rate; Profile Stats tab tracks three GBP metrics with baseline + 12 months, VLOOKUP to Client Roster, Direction Requests auto-N/A for non-physical clients MessageTemplate.docx — plain UTF-8 text despite extension A 23-finding audit has been completed (beyond five known issues JT pre-identified). Key resolved or in-progress issues include: critical copy error on management plan card ("You handle" → "We handle"), missing Google-mandated third-party disclosure notice, non-functional check-in form due to unfilled SCRIPTURL, and contractual conflict between Service Agreement and SOP on offboarding timeline (now aligned to seven business days). Industry count is 30 named industries in the form vs. "25+" in marketing copy — this discrepancy should be addressed. Eight targeted per-file update prompts were produced in a separate conversation, scoped to confirmed changes only (not full rewrites), for execution by a Sonnet instance. On the horizon Fill remaining bracket placeholders manually across documents Confirm hosting for checkin.html and update public URL in recap email Resolve "25+" vs. 30-industry discrepancy in marketing copy and business plan Deploy Google Apps Script backend handler for check-in form submissions (currently no handler exists; check-in data would be silently dropped) Activate Google Organization account structure (business.google.com/agencysignup) — treat as immediate, not a future scale-up step Build acquisition materials: cold outreach sequences, follow-up cadence, referral asks, case study templates Planned setup fee increase and potential tiered pricing once early client proof is established Key learnings & principles Google compliance is non-negotiable before onboarding: Mandatory third-party disclosure notice, written fee disclosure (GBP is free), and offboarding within seven business days are Google requirements — not optional additions Clients own everything; FrontDoor is always Manager-level: Never share passwords or take ownership of client Google Accounts or Business Profiles Photos are a hard gate before any profile build begins Video verification is now dominant (2026): Must be recorded live on the client's device while logged into their own Google Account; takes 3–5 business days Batch by task across all clients, not client-by-client, to protect time efficiency Current price is viable at scale, tight when manual: ~20–30 min/client is the target; the primary risk is a perception problem (Localo offers feature-rich software at a similar nominal price) rather than a true pricing problem — messaging must emphasize done-for-you vs. DIY Localo is a positioning reference, not a direct competitor: Serves marketing-capable owners; FrontDoor serves time-constrained owners who want everything handled KPI tracker formula safety: Append new columns at the end of the Client Roster rather than inserting mid-table, to avoid breaking positional formula references in Dashboard and Profile Stats Approach & patterns Direct, minimal commentary: JT prefers concise responses without preamble; explicit preference for surgical, targeted edits over full rewrites ("only update what is being asked for") Separate workstreams into separate conversations to avoid diluted output quality (e.g., audit, frontend fixes, and backend in distinct sessions) Clarifying questions before drafting when decisions are needed — consolidated into one prose round rather than multiple exchanges; most inputs require free-text answers incompatible with structured selection formats Read actual files before drafting prompts — grounding in exact line numbers, field names, and file-type quirks (notably misleading .docx extensions) rather than working from descriptions Reusability and batching are core operational values across both technical and client-facing work Go-to-market sequence: Build delivery system → prove on warm clients → harvest testimonials → scale acquisition; referrals and organic growth as long-term engine after manual outreach ignition Tools & resources Stack: Google Workspace, Google Apps Script, Google Sheets, Google Colab, GitHub / GitHub Pages, VS Code File quirks: GoogleAppsScript.docx, FrontDoor-Service-Agreement.docx, MessageTemplate.docx are plain UTF-8 text — use cat, not Word/docx parsers. FrontDoorKPITracker.xlsx is a genuine Excel file requiring openpyxl or equivalent Useful bash patterns: grep -n "string" filename | head -N for exact line numbers; echo "=== label ===" && command for multi-file context gathering in one pass; wb.iterrows(minrow=1, maxrow=2, valuesonly=True) per sheet for xlsx header inspection Web research: websearch before webfetch for Google support pages; htmlextractionmethod: markdown works cleanly on Google support pages Prospecting reference tools: BrightLocal, Localo, Whitespark (bulk audit); manual five-minute scan per business is the safe path given Google's ToS on automated scraping
+
+Last updated 9 hours ago
+
+Instructions
+Add instructions to tailor Claude’s responses
+
+Files
+4% of project capacity used
+Search mode
+
+FrontDoor-Profile-SOP.md
+1,142 lines
+
+md
+
+
+
+FrontDoor-Service-Agreement.docx
+105 lines
+
+docx
+
+
+
+FrontDoor-Monthly-Recap-Email.md
+87 lines
+
+md
+
+
+
+FrontDoor-Profile-Business-Plan.md
+306 lines
+
+md
+
+
+
+index.html
+506 lines
+
+html
+
+
+
+checkin.html
+918 lines
+
+html
+
+
+
+form.html
+1,092 lines
+
+html
+
+
+
+Google Apps Script (1).docx
+857 lines
+
+docx
+
+
+
+Message Template.docx
+61 lines
+
+docx
+
+
+
+FrontDoorKPITracker.xlsx
+xlsx
+
+
+
+index.html
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> FrontDoor Profile | Google Business Profile Setup & Management</title>
+    <title>FrontDoor Profile | Google Business Profile Setup & Management</title>
     <meta name="description" content="Get your Google Business Profile set up for $129. Monthly management for $39/month. Built for small businesses who want to show up on Google without agency fees.">
-    <link href="form.html" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
         :root {
             --navy:      #0F4C81;
             --navy-dk:   #0A3357;
@@ -22,9 +165,9 @@
             --bg-alt:    #F8FAFC;
             --white:     #FFFFFF;
         }
-
+ 
         html { scroll-behavior: smooth; }
-
+ 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             color: var(--body);
@@ -32,7 +175,7 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
-
+ 
         /* ── NAV ── */
         nav {
             position: sticky; top: 0; z-index: 100;
@@ -60,7 +203,7 @@
         .nav-links a:hover { color: var(--navy); background: var(--bg-alt); }
         .nav-cta { background: var(--navy) !important; color: white !important; margin-left: 0.5rem; }
         .nav-cta:hover { background: var(--navy-dk) !important; }
-
+ 
         /* ── HERO ── */
         .hero {
             padding: 6rem 2rem 5rem; text-align: center;
@@ -97,7 +240,7 @@
         }
         .btn-outline { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
         .btn-outline:hover { background: var(--navy); color: white; }
-
+ 
         /* ── COMPARISON — SIGNATURE ELEMENT ── */
         .comparison {
             background: var(--dark); padding: 5.5rem 2rem; text-align: center;
@@ -114,7 +257,7 @@
         }
         .comparison h2 { color: white; }
         .comp-desc { color: #94A3B8; font-size: 1rem; max-width: 460px; margin: 0 auto 3rem; }
-
+ 
         .comp-table {
             display: grid; grid-template-columns: 1fr 48px 1fr;
             border-radius: 14px; overflow: hidden; border: 1px solid #1E293B;
@@ -154,14 +297,14 @@
         .comp-list li span.icon { flex-shrink: 0; font-size: 0.75rem; margin-top: 2px; }
         .comp-col.agency .comp-list li span.icon { color: #F87171; }
         .comp-col.us .comp-list li span.icon { color: var(--green); }
-
+ 
         .savings-pill {
             display: inline-block; margin-top: 2.5rem;
             background: var(--green); color: #052E16;
             font-weight: 800; font-size: 0.95rem;
             padding: 0.8rem 2.25rem; border-radius: 8px;
         }
-
+ 
         /* ── SECTIONS ── */
         .section { padding: 5rem 2rem; }
         .section-inner { max-width: 1060px; margin: 0 auto; }
@@ -169,7 +312,7 @@
         .section-hd { text-align: center; margin-bottom: 3.5rem; }
         .section-hd .eyebrow { color: var(--navy); }
         .section-sub { color: var(--muted); max-width: 460px; margin: 0 auto; }
-
+ 
         /* ── HOW IT WORKS ── */
         .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 1.5rem; }
         .step {
@@ -183,7 +326,7 @@
         }
         .step h3 { font-size: 1rem; font-weight: 700; letter-spacing: -0.015em; margin-bottom: 0.5rem; }
         .step p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
-
+ 
         /* ── PRICING ── */
         .pricing-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(285px,1fr)); gap: 1.5rem; max-width: 720px; margin: 0 auto; }
         .price-card {
@@ -210,7 +353,7 @@
         .price-btn-ghost { background: var(--bg-alt); color: var(--navy); border: 1.5px solid var(--border); }
         .price-btn-ghost:hover { background: var(--border); }
         .price-note { text-align: center; margin-top: 1.25rem; font-size: 0.78rem; color: var(--muted); }
-
+ 
         /* ── ABOUT ── */
         .about-lay { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: center; }
         .about-txt .eyebrow { color: var(--navy); margin-bottom: 0.75rem; }
@@ -223,7 +366,7 @@
         }
         .stat-num { font-size: 2rem; font-weight: 800; color: var(--navy); letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.35rem; }
         .stat-lbl { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
-
+ 
         /* ── CONTACT ── */
         .contact-wrap { max-width: 540px; margin: 0 auto; text-align: center; }
         .contact-wrap h2 { margin-bottom: 0.65rem; }
@@ -235,7 +378,7 @@
         .con-card p, .con-card a { font-size: 0.825rem; color: var(--muted); text-decoration: none; }
         .con-card a { color: var(--navy); font-weight: 600; }
         .con-card a:hover { text-decoration: underline; }
-
+ 
         /* ── FOOTER ── */
         footer {
             border-top: 1px solid var(--border); padding: 2.25rem 2rem;
@@ -244,7 +387,7 @@
         .footer-logo { font-size: 0.95rem; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; margin-bottom: 0.35rem; }
         .footer-logo .dot { color: var(--green); }
         footer p { font-size: 0.78rem; color: var(--muted); }
-
+ 
         /* ── RESPONSIVE ── */
         @media (max-width: 700px) {
             nav { padding: 0 1rem; }
@@ -255,46 +398,45 @@
             .about-lay { grid-template-columns: 1fr; gap: 2.5rem; }
             .contact-cards { grid-template-columns: 1fr; }
         }
-
+ 
         @media (prefers-reduced-motion: reduce) {
             .btn-primary:hover { transform: none; box-shadow: none; }
         }
     </style>
 </head>
 <body>
-
+ 
 <!-- ── NAVIGATION ── -->
 <nav>
     <a href="#home" class="logo">FrontDoor<span class="dot"> Profile</span></a>
     <ul class="nav-links">
-        <li><a href="#why-gbp">Why Google Business Profile Is Important?</a></li>
+        <li><a href="#why-gbp">Why It Matters</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact" class="nav-cta">Get Started →</a></li>
     </ul>
 </nav>
-
+ 
 <!-- ── HERO ── -->
 <section class="hero" id="home">
     <div class="hero-inner">
         <h1>Your business on Google.<br><span class="accent">Done right. For $129.</span></h1>
-        <p class="hero-desc">We set up and manage your Google Business Profile so local customers can find you — without the $500/month agency price tag.</p>
+        <p class="hero-desc">We set up and manage your Google Business Profile so local customers can find you — without the $500–$1,000/month agency price tag.</p>
         <div class="cta-row">
-            <!-- REPLACE THE LINK BELOW WITH YOUR GOOGLE FORM URL -->
             <a href="form.html" class="btn btn-primary">Get Set Up for $129 →</a>
             <a href="#pricing" class="btn btn-outline">See What's Included</a>
         </div>
     </div>
 </section>
-
+ 
 <!-- ── COMPARISON (SIGNATURE ELEMENT) ── -->
 <section class="comparison">
     <div class="comparison-inner">
         <div class="eyebrow">Why FrontDoor Profile</div>
         <h2>Stop paying agency prices<br>for bundled services.</h2>
         <p class="comp-desc">Most agencies bundle services you don't need. We focus on the single highest-ROI move a local business can make online.</p>
-
+ 
         <div class="comp-table">
             <div class="comp-col agency">
                 <span class="comp-tag">Traditional SEO Agency</span>
@@ -318,13 +460,14 @@
                     <li><span class="icon">✓</span>Only what local businesses need</li>
                     <li><span class="icon">✓</span>Clear Google Maps presence</li>
                     <li><span class="icon">✓</span>Set up in days, not weeks</li>
+                    <li><span class="icon">✓</span>Transparent, flat pricing — no surprises</li>
                 </ul>
             </div>
         </div>
-
+ 
     </div>
 </section>
-
+ 
 <!-- ── WHY GBP MATTERS ── -->
 <section class="section" id="why-gbp">
     <div class="section-inner">
@@ -339,7 +482,7 @@
                 this is the only touchpoint that matters. 
             </p>
         </div>
-
+ 
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:1.5rem; max-width:920px; margin:0 auto;">
             <div class="stat" style="background: var(--bg-alt);">
                 <div class="stat-num">2.7x</div>
@@ -354,7 +497,7 @@
                 <div class="stat-lbl">Customers are 50% more likely to consider purchasing from businesses with a complete Business Profile.<br><span style="font-size:0.7rem; opacity:0.7;">Google</span></div>
             </div>
         </div>
-
+ 
         <p style="text-align:center; max-width:580px; margin:2.5rem auto 0; color:var(--muted); font-size:0.925rem; line-height:1.75;">
             Businesses with complete, active Google Business Profiles may appear more prominently
             in local search results and can generate more calls and website
@@ -362,7 +505,7 @@
         </p>
     </div>
 </section>
-
+ 
 <!-- ── HOW IT WORKS ── -->
 <section class="section bg-alt" id="how-it-works">
     <div class="section-inner">
@@ -375,7 +518,7 @@
             <div class="step">
                 <div class="step-num">1</div>
                 <h3>Fill Out Our Quick Form</h3>
-                <p>Tell us about your business in about 10 minutes. We've pre-listed the common services for 25+ industries, so you just check what applies to you.</p>
+                <p>Tell us about your business in about 10 minutes. We've pre-listed the common services for 30+ industries, so you just check what applies to you.</p>
             </div>
             <div class="step">
                 <div class="step-num">2</div>
@@ -390,7 +533,7 @@
         </div>
     </div>
 </section>
-
+ 
 <!-- ── PRICING ── -->
 <section class="section" id="pricing">
     <div class="section-inner">
@@ -414,7 +557,6 @@
                     <li>Service area configuration</li>
                     <li>Photo guidance &amp; upload assistance</li>
                 </ul>
-                <!-- REPLACE LINK BELOW WITH YOUR GOOGLE FORM URL -->
                 <a href="form.html" class="price-btn price-btn-ghost">Get the Setup →</a>
             </div>
             <!-- SETUP + MANAGEMENT -->
@@ -432,14 +574,13 @@
                     <li>Hours &amp; info kept current</li>
                     <li>Cancel anytime, no penalty</li>
                 </ul>
-                <!-- REPLACE LINK BELOW WITH YOUR GOOGLE FORM URL -->
                 <a href="form.html" class="price-btn price-btn-fill">Get Started →</a>
             </div>
         </div>
         <p class="price-note">Both plans begin with the one-time $129 setup fee. Monthly management is optional and billed month-to-month with no contract.</p>
     </div>
 </section>
-
+ 
 <!-- ── ABOUT ── -->
 <section class="section bg-alt" id="about">
     <div class="section-inner">
@@ -457,12 +598,12 @@
                     <div class="stat-lbl">One-time setup — less than most agencies charge for a single hour</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-num">25+</div>
+                    <div class="stat-num">30+</div>
                     <div class="stat-lbl">Industries covered with pre-built, optimized service checklists to save you time</div>
                 </div>
                 <div class="stat">
                     <div class="stat-num">97%</div>
-                    <div class="stat-lbl">Of customers research you online before reaching out.</div>
+                    <div class="stat-lbl">of customers research a business online before reaching out</div>
                 </div>
                 <div class="stat">
                     <div class="stat-num">$0</div>
@@ -472,15 +613,14 @@
         </div>
     </div>
 </section>
-
+ 
 <!-- ── CONTACT ── -->
 <section class="section" id="contact">
     <div class="contact-wrap">
         <div class="eyebrow" style="color: var(--navy); margin-bottom: 0.75rem;">Get Started</div>
         <h2>Ready to show up on Google?</h2>
         <p class="section-sub">Fill out our quick questionnaire and we'll have your profile set up within a few business days.</p>
-
-        <!-- REPLACE LINK BELOW WITH YOUR GOOGLE FORM URL -->
+ 
         <div style="display:flex; align-items:center; justify-content:center; gap:1.5rem; flex-wrap:wrap; margin-top:2rem;">
             <a href="form.html" class="btn btn-primary" style="font-size:1rem; padding:1rem 2.25rem;">
                 Fill Out the Questionnaire →
@@ -492,14 +632,16 @@
         </div>
     </div>
 </section>
-
+ 
 <!-- ── FOOTER ── -->
 <footer>
     <div class="footer-logo">FrontDoor<span class="dot"> Profile</span></div>
     <p>Google Business Profile Setup &amp; Management for Small Businesses</p>
     <!-- UPDATE YEAR AS NEEDED -->
     <p style="margin-top: 0.35rem;">© 2026 FrontDoor Profile · All rights reserved</p>
+    <p style="margin-top: 0.35rem;"><a href="https://support.google.com/business/answer/7163406" target="_blank" rel="noopener" style="color: var(--muted); text-decoration: underline;">Working with a third party? See Google's disclosure for businesses</a></p>
 </footer>
-
+ 
 </body>
 </html>
+ 
