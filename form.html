@@ -31,7 +31,7 @@
       background: var(--bg-alt); color: var(--body);
       line-height: 1.6; -webkit-font-smoothing: antialiased;
     }
- 
+
     /* ── NAV ── */
     nav {
       position: sticky; top: 0; z-index: 100;
@@ -44,10 +44,10 @@
     .logo .dot { color: var(--green); }
     .nav-back { font-size: .8rem; color: var(--muted); text-decoration: none; font-weight: 500; }
     .nav-back:hover { color: var(--navy); }
- 
+
     /* ── LAYOUT ── */
     .wrap { max-width: 680px; margin: 0 auto; padding: 2rem 1rem 5rem; }
- 
+
     /* ── PROGRESS ── */
     .prog-wrap { margin-bottom: 1.75rem; }
     .prog-meta { display: flex; justify-content: space-between; margin-bottom: .45rem; }
@@ -55,30 +55,30 @@
     .prog-pct   { font-size: .75rem; font-weight: 700; color: var(--navy); }
     .prog-track { height: 5px; background: var(--border); border-radius: 100px; overflow: hidden; }
     .prog-fill  { height: 100%; background: var(--green); border-radius: 100px; transition: width .4s ease; }
- 
+
     /* ── STEPS ── */
     .step { display: none; }
     .step.active { display: block; }
- 
+
     /* ── CARD ── */
     .card {
       background: var(--white); border: 1px solid var(--border);
       border-radius: 16px; padding: 2.25rem;
       margin-bottom: 1rem; box-shadow: 0 1px 8px rgba(0,0,0,.04);
     }
- 
+
     /* ── STEP HEADER ── */
     .eyebrow { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; color: var(--navy); margin-bottom: .35rem; }
     .step-title { font-size: 1.35rem; font-weight: 800; color: var(--dark); letter-spacing: -.025em; margin-bottom: .3rem; }
     .step-desc  { font-size: .85rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.75rem; }
- 
+
     /* ── FIELDS ── */
     .field { margin-bottom: 1.35rem; }
     .field:last-child { margin-bottom: 0; }
     .lbl  { display: block; font-size: .8rem; font-weight: 700; color: var(--body); margin-bottom: .4rem; }
     .req  { color: var(--red); margin-left: 2px; }
     .hint { font-size: .775rem; color: var(--muted); margin-bottom: .45rem; line-height: 1.55; }
- 
+
     input[type="text"], input[type="email"], input[type="tel"],
     input[type="url"], textarea, select {
       width: 100%; border: 1.5px solid var(--border); border-radius: 8px;
@@ -96,7 +96,7 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath fill='none' stroke='%2364748B' stroke-width='1.5' d='M1 1l4.5 4.5L10 1'/%3E%3C/svg%3E");
       background-repeat: no-repeat; background-position: right .9rem center; padding-right: 2.5rem;
     }
- 
+
     /* ── OPTIONS (radio / checkbox) ── */
     .opt-group { display: flex; flex-direction: column; gap: .4rem; }
     .opt {
@@ -109,7 +109,7 @@
     .opt input { margin-top: 2px; flex-shrink: 0; accent-color: var(--navy); width: 15px; height: 15px; cursor: pointer; }
     .opt-text  { font-size: .875rem; color: var(--body); line-height: 1.4; }
     .opt-sub   { font-size: .775rem; color: var(--muted); margin-top: 1px; }
- 
+
     /* ── INDUSTRY GRID ── */
     .ind-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem; }
     .ind-opt {
@@ -121,7 +121,7 @@
     .ind-opt:hover { border-color: #93C5FD; background: #F8FBFF; }
     .ind-opt.sel   { border-color: var(--navy); background: #EFF6FF; color: var(--navy); font-weight: 700; }
     .ind-opt input { accent-color: var(--navy); flex-shrink: 0; width: 14px; height: 14px; cursor: pointer; }
- 
+
     /* ── SERVICES GRID ── */
     .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .35rem; }
     .svc {
@@ -133,7 +133,7 @@
     .svc:hover { border-color: #6EE7B7; }
     .svc.sel   { border-color: var(--green); background: var(--green-bg); }
     .svc input { accent-color: var(--green); flex-shrink: 0; margin-top: 2px; width: 14px; height: 14px; cursor: pointer; }
- 
+
     /* ── HOURS PICKER ── */
     .day-row {
       display: flex; align-items: center; gap: .7rem;
@@ -156,7 +156,7 @@
     }
     .day-t input[type="time"]:focus { border-color: var(--green); }
     .t-sep { font-size: .72rem; color: var(--muted); flex-shrink: 0; }
- 
+
     /* ── PLAN CARDS ── */
     .plan-opt {
       display: flex; align-items: flex-start; gap: .7rem;
@@ -169,7 +169,7 @@
     .plan-name  { font-size: .9rem; font-weight: 700; color: var(--dark); }
     .plan-price { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: .15rem; }
     .plan-desc  { font-size: .8rem; color: var(--muted); line-height: 1.5; }
- 
+
     /* ── BUTTONS ── */
     .form-nav { display: flex; gap: .75rem; margin-top: 1.1rem; }
     .btn {
@@ -184,7 +184,7 @@
     .btn-submit  { background: var(--green); color: #052E16; flex: 1; font-weight: 800; }
     .btn-submit:hover:not(:disabled) { background: #16A34A; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(34,197,94,.3); }
     .btn:disabled { opacity: .55; cursor: not-allowed; transform: none !important; box-shadow: none !important; }
- 
+
     /* ── ERROR BANNER ── */
     .err-msg {
       display: none; background: var(--red-bg); border: 1px solid #FECACA;
@@ -192,7 +192,7 @@
       font-size: .82rem; color: #B91C1C; margin-top: .75rem; line-height: 1.5;
     }
     .err-msg.show { display: block; }
- 
+
     /* ── SUCCESS ── */
     .success-wrap { text-align: center; padding: 2.5rem 1rem; }
     .success-icon {
@@ -203,7 +203,7 @@
     .success-wrap h2 { font-size: 1.5rem; font-weight: 800; color: var(--dark); letter-spacing: -.02em; margin-bottom: .5rem; }
     .success-wrap p  { font-size: .875rem; color: var(--muted); line-height: 1.75; max-width: 420px; margin: 0 auto; }
     .success-wrap a  { display: inline-block; margin-top: 2rem; color: var(--navy); font-size: .875rem; font-weight: 700; text-decoration: underline; }
- 
+
     /* ── RESPONSIVE ── */
     @media (max-width: 580px) {
       .card { padding: 1.4rem; }
@@ -219,14 +219,14 @@
   </style>
 </head>
 <body>
- 
+
 <nav>
   <a href="index.html" class="logo">FrontDoor<span class="dot"> Profile</span></a>
   <a href="index.html" class="nav-back">← Back to home</a>
 </nav>
- 
+
 <div class="wrap">
- 
+
   <!-- PROGRESS -->
   <div class="prog-wrap" id="prog-wrap">
     <div class="prog-meta">
@@ -235,7 +235,7 @@
     </div>
     <div class="prog-track"><div class="prog-fill" id="prog-fill" style="width:25%"></div></div>
   </div>
- 
+
   <!-- ══════════════════════════════════════════════
        STEP 1 — BASIC INFORMATION
   ══════════════════════════════════════════════ -->
@@ -244,7 +244,7 @@
       <div class="eyebrow">Step 1 of 4</div>
       <div class="step-title">About Your Business</div>
       <div class="step-desc">This information forms the foundation of your Google Business Profile. Fields marked <span style="color:var(--red)">*</span> are required.</div>
- 
+
       <div class="field">
         <label class="lbl" for="f-biz">Business Name <span class="req">*</span></label>
         <input type="text" id="f-biz" placeholder="e.g. Mike's Plumbing Co." autocomplete="organization">
@@ -285,14 +285,14 @@
         <textarea id="f-area" rows="2" placeholder="e.g. Springfield, Shelbyville, and surrounding areas within 30 miles"></textarea>
       </div>
     </div>
- 
+
     <!-- HOURS CARD -->
     <div class="card">
       <label class="lbl">Business Hours <span class="req">*</span></label>
       <p class="hint">Check each day you're open and enter your hours. Leave unchecked for days you're closed.</p>
       <div id="hours-picker"><!-- built by JS --></div>
     </div>
- 
+
     <!-- YEAR + DESCRIPTION -->
     <div class="card">
       <div class="field">
@@ -306,13 +306,13 @@
         <textarea id="f-desc" rows="4" placeholder="e.g. Mike's Plumbing Co. has served the Springfield area since 2008, offering same-day emergency repairs, water heater replacement, and complete repiping for residential and light commercial customers."></textarea>
       </div>
     </div>
- 
+
     <div class="err-msg" id="err-1">Please complete all required fields (marked *) and check at least one day of business hours before continuing.</div>
     <div class="form-nav">
       <button class="btn btn-primary" onclick="nextStep(1)">Next: Your Business Type →</button>
     </div>
   </div>
- 
+
   <!-- ══════════════════════════════════════════════
        STEP 2 — INDUSTRY SELECTION
   ══════════════════════════════════════════════ -->
@@ -329,7 +329,7 @@
       <button class="btn btn-primary" onclick="nextStep(2)">Next: Your Services →</button>
     </div>
   </div>
- 
+
   <!-- ══════════════════════════════════════════════
        STEP 3 — INDUSTRY QUESTIONS (dynamic)
   ══════════════════════════════════════════════ -->
@@ -341,7 +341,7 @@
       <button class="btn btn-primary" onclick="nextStep(3)">Next: Final Details →</button>
     </div>
   </div>
- 
+
   <!-- ══════════════════════════════════════════════
        STEP 4 — FINAL QUESTIONS
   ══════════════════════════════════════════════ -->
@@ -350,7 +350,7 @@
       <div class="eyebrow">Step 4 of 4</div>
       <div class="step-title">Final Details</div>
       <div class="step-desc">Just a few more things to help your profile stand out from the competition.</div>
- 
+
       <div class="field">
         <label class="lbl" for="f-diff">What makes your business stand out from competitors in your area? <span class="req">*</span></label>
         <p class="hint">This is your chance to brag! Tell us what your customers love about you, what you do better, or what makes your approach unique.</p>
@@ -367,10 +367,12 @@
         <input type="text" id="f-disc" placeholder="e.g. 10% senior discount, free estimates">
       </div>
       <div class="field">
-        <label class="lbl">Photos for Your Google Profile</label>
-        <p class="hint">After submitting, please email your photos to <strong>info@frontdoorprofile.com</strong>. Great options: exterior of your location or work vehicle, your work in action, team photos, before &amp; after shots, products you sell.</p>
+        <label class="lbl" for="f-photos">Photos for Your Google Profile</label>
+        <input type="file" id="f-photos" accept="image/*" multiple style="margin-top:.4rem">
+        <p class="hint">Great options: exterior of your location or work vehicle, your work in action, team photos, before &amp; after shots, products you sell.</p>
+        <p id="photo-count" style="font-size:.85rem;color:var(--muted);margin-top:.3rem"></p>
       </div>
- 
+
       <!-- PLAN SELECTION -->
       <div class="field">
         <label class="lbl">Which plan would you like? <span class="req">*</span></label>
@@ -400,7 +402,7 @@
           </label>
         </div>
       </div>
- 
+
       <div class="field">
         <label class="lbl" for="f-hear">How did you hear about FrontDoor Profile?</label>
         <select id="f-hear">
@@ -424,14 +426,14 @@
         <textarea id="f-extra" rows="3" placeholder="Any other details that would help us set up your profile…"></textarea>
       </div>
     </div>
- 
+
     <div class="err-msg" id="err-4">Please fill in your differentiator and select a plan before submitting.</div>
     <div class="form-nav">
       <button class="btn btn-ghost" onclick="prevStep(4)">← Back</button>
       <button class="btn btn-submit" id="submit-btn" onclick="submitForm()">Submit Questionnaire →</button>
     </div>
   </div>
- 
+
   <!-- ══════════════════════════════════════════════
        SUCCESS
   ══════════════════════════════════════════════ -->
@@ -440,21 +442,21 @@
       <div class="success-icon">✓</div>
       <h2>You're all set!</h2>
       <p>Thank you — we received your questionnaire. We'll send your kickoff instructions within 1–2 business days. The full setup, including Google's verification review, typically takes 1–2 weeks. We'll email you at the address you provided once your profile is live.</p>
-      <p style="margin-top:.75rem">Don't forget to email your photos to <strong>info@frontdoorprofile.com</strong>.</p>
+      <p style="margin-top:.75rem">We've received your photos and details.</p>
       <a href="index.html">← Return to FrontDoor Profile</a>
     </div>
   </div>
- 
+
 </div><!-- /wrap -->
- 
+
 <script>
 // ╔═══════════════════════════════════════════════════════════╗
 // ║  ⚙  CONFIGURATION — EDIT BEFORE GOING LIVE               ║
 // ╚═══════════════════════════════════════════════════════════╝
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwn1jtdYtHArTyVr0BFnE70ftxHa6gtzrUJb3KO-ERSb8T_u9I_TuHXe4w9ulRwsJpW1A/exec';
 // Google Apps Script Web App URL — update here and in checkin.html if you redeploy
- 
- 
+
+
 // ╔═══════════════════════════════════════════════════════════╗
 // ║  📋  INDUSTRY DATA                                        ║
 // ║  To add an industry:  copy one block and edit it          ║
@@ -746,7 +748,7 @@ const INDUSTRIES = [
     ]
   }
 ];
- 
+
 // ──────────────────────────────────────────────────────────
 //  DAYS OF WEEK
 // ──────────────────────────────────────────────────────────
@@ -756,7 +758,7 @@ const DAYS = [
   {id:'fri', label:'Friday'},   {id:'sat', label:'Saturday'},
   {id:'sun', label:'Sunday'}
 ];
- 
+
 // ──────────────────────────────────────────────────────────
 //  BUILD HOURS PICKER
 // ──────────────────────────────────────────────────────────
@@ -778,20 +780,20 @@ function buildHoursPicker() {
     row.querySelector('.day-chk').addEventListener('change', () => toggleDay(id));
   });
 }
- 
+
 function toggleDay(id) {
   const open = document.getElementById('dchk-' + id).checked;
   document.getElementById('drow-' + id).classList.toggle('open', open);
   document.getElementById('dcl-'  + id).style.display = open ? 'none' : '';
   document.getElementById('dt-'   + id).classList.toggle('show', open);
 }
- 
+
 function to12h(t) {
   if (!t) return '';
   const [h, m] = t.split(':').map(Number);
   return `${h % 12 || 12}:${String(m).padStart(2,'0')} ${h >= 12 ? 'PM' : 'AM'}`;
 }
- 
+
 // ──────────────────────────────────────────────────────────
 //  BUILD INDUSTRY GRID (Step 2)
 // ──────────────────────────────────────────────────────────
@@ -804,12 +806,12 @@ function buildIndustryGrid() {
     grid.appendChild(el);
   });
 }
- 
+
 // ──────────────────────────────────────────────────────────
 //  BUILD INDUSTRY QUESTIONS (Step 3)
 // ──────────────────────────────────────────────────────────
 let selectedIndustry = -1;
- 
+
 function buildIndustryQuestions(idx) {
   const ind  = INDUSTRIES[idx];
   const card = document.getElementById('ind-card');
@@ -817,7 +819,7 @@ function buildIndustryQuestions(idx) {
     <div class="eyebrow">Step 3 of 4</div>
     <div class="step-title">${escHtml(ind.name)}</div>
     <div class="step-desc">Check all the services you offer. The more complete your list, the better your profile will perform in local search.</div>`;
- 
+
   if (ind.services.length > 0) {
     html += `<div class="field"><label class="lbl">Which services do you offer? <span class="req">*</span>
       <span style="font-weight:400;color:var(--muted);font-size:.77rem">— check all that apply</span></label>
@@ -827,10 +829,10 @@ function buildIndustryQuestions(idx) {
     });
     html += `</div></div>`;
   }
- 
+
   html += `<div class="field"><label class="lbl" for="f-osvc">Any other services not listed above?</label>
     <input type="text" id="f-osvc" placeholder="e.g. Additional service 1, Additional service 2"></div>`;
- 
+
   ind.questions.forEach((q, qi) => {
     const id = `iq-${qi}`;
     if (q.type === 'text') {
@@ -847,15 +849,15 @@ function buildIndustryQuestions(idx) {
       html += `</div></div>`;
     }
   });
- 
+
   card.innerHTML = html;
- 
+
   // Attach service checkbox listeners
   card.querySelectorAll('.svc input[type="checkbox"]').forEach(inp =>
     inp.addEventListener('change', () => inp.closest('.svc').classList.toggle('sel', inp.checked))
   );
 }
- 
+
 // ──────────────────────────────────────────────────────────
 //  OTHER-BIZ FIELD VISIBILITY
 // ──────────────────────────────────────────────────────────
@@ -863,14 +865,14 @@ function updateOtherBizVisibility() {
   const show = selectedIndustry >= 0 && INDUSTRIES[selectedIndustry].name === 'Other (not listed above)';
   document.getElementById('otherbiz-wrap').style.display = show ? '' : 'none';
 }
- 
+
 // ──────────────────────────────────────────────────────────
 //  GLOBAL EVENT DELEGATION — radio highlighting
 // ──────────────────────────────────────────────────────────
 document.addEventListener('change', function(e) {
   const inp = e.target;
   if (inp.type !== 'radio') return;
- 
+
   // Industry grid
   if (inp.name === 'industry') {
     document.querySelectorAll('.ind-opt').forEach(o => o.classList.remove('sel'));
@@ -880,14 +882,14 @@ document.addEventListener('change', function(e) {
     updateOtherBizVisibility();
     return;
   }
- 
+
   // Plan options
   if (inp.name === 'plan') {
     document.querySelectorAll('#grp-plan .plan-opt').forEach(o => o.classList.remove('sel'));
     inp.closest('.plan-opt').classList.add('sel');
     return;
   }
- 
+
   // All other radio groups (.opt-group)
   const grp = inp.closest('.opt-group');
   if (grp) {
@@ -895,7 +897,7 @@ document.addEventListener('change', function(e) {
     inp.closest('.opt').classList.add('sel');
   }
 });
- 
+
 // Location type highlighting (static radio group in Step 1)
 document.getElementById('grp-loc').addEventListener('change', function(e) {
   this.querySelectorAll('.opt').forEach(o => o.classList.remove('sel'));
@@ -909,7 +911,7 @@ document.getElementById('grp-loc').addEventListener('change', function(e) {
     document.getElementById('f-addr').classList.remove('err');
   }
 });
- 
+
 // ──────────────────────────────────────────────────────────
 //  STEP NAVIGATION
 // ──────────────────────────────────────────────────────────
@@ -920,7 +922,7 @@ const PROG = [
   {label:'Step 3 of 4 — Your Services',           pct:'75%'},
   {label:'Step 4 of 4 — Final Details',           pct:'100%'}
 ];
- 
+
 function showStep(n) {
   document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
   if (n === 'success') {
@@ -935,17 +937,17 @@ function showStep(n) {
     window.scrollTo({top: 0, behavior:'smooth'});
   }
 }
- 
+
 function nextStep(from) {
   clearErr(from);
   if (!validate(from)) return;
   showStep(from + 1);
 }
- 
+
 function prevStep(from) { showStep(from - 1); }
- 
+
 function clearErr(n) { document.getElementById('err-' + n).classList.remove('show'); }
- 
+
 // ──────────────────────────────────────────────────────────
 //  VALIDATION
 // ──────────────────────────────────────────────────────────
@@ -987,9 +989,9 @@ function validate(step) {
   }
   return true;
 }
- 
+
 function showErr(n) { document.getElementById('err-' + n).classList.add('show'); }
- 
+
 // ──────────────────────────────────────────────────────────
 //  COLLECT ALL FORM DATA
 // ──────────────────────────────────────────────────────────
@@ -1003,12 +1005,12 @@ function collectData() {
       close: open ? to12h(document.getElementById('dc-' + id).value) : ''
     };
   });
- 
+
   // Services (checked items)
   const services = Array.from(
     document.querySelectorAll('#ind-card input[name="service"]:checked')
   ).map(i => i.value);
- 
+
   // Industry text/textarea answers
   const qa = {};
   document.querySelectorAll('#ind-card [data-q]').forEach(el => {
@@ -1019,9 +1021,9 @@ function collectData() {
     const checked = grp.querySelector('input[type="radio"]:checked');
     if (checked) qa[grp.dataset.q] = checked.value;
   });
- 
+
   const osvc = document.getElementById('f-osvc');
- 
+
   return {
     formType:       'intake',
     submittedAt:    new Date().toISOString(),
@@ -1049,30 +1051,64 @@ function collectData() {
     additionalInfo: document.getElementById('f-extra').value.trim()
   };
 }
- 
+
 // ──────────────────────────────────────────────────────────
 //  SUBMIT
 // ──────────────────────────────────────────────────────────
-function submitForm() {
+function compressImage(file) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onerror = () => { URL.revokeObjectURL(url); resolve(null); };
+    img.onload  = () => {
+      URL.revokeObjectURL(url);
+      const MAX = 1600;
+      let w = img.naturalWidth, h = img.naturalHeight;
+      if (w > MAX || h > MAX) {
+        if (w >= h) { h = Math.round(h * MAX / w); w = MAX; }
+        else        { w = Math.round(w * MAX / h); h = MAX; }
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      const dataURL    = canvas.toDataURL('image/jpeg', 0.8);
+      const dataBase64 = dataURL.split(',')[1];  // strip "data:image/jpeg;base64,"
+      resolve({ name: file.name, mimeType: 'image/jpeg', dataBase64 });
+    };
+    img.src = url;
+  });
+}
+
+async function submitForm() {
   clearErr(4);
   if (!validate(4)) return;
- 
+
   if (SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL_HERE') {
     alert('Setup required: please replace SCRIPT_URL at the top of form.html with your Google Apps Script URL.\n\nSee the setup instructions in Code.gs.');
     return;
   }
- 
+
   const btn = document.getElementById('submit-btn');
   btn.textContent = 'Submitting…'; btn.disabled = true;
- 
+
+  const fileInput = document.getElementById('f-photos');
+  const files     = fileInput ? Array.from(fileInput.files).slice(0, 10) : [];
+  const results   = await Promise.allSettled(files.map(compressImage));
+  const photos    = results
+    .filter(r => r.status === 'fulfilled' && r.value !== null)
+    .map(r => r.value);
+
+  const payload  = collectData();
+  payload.photos = photos;
+
   fetch(SCRIPT_URL, {
     method: 'POST',
     mode:   'no-cors',
-    body:   JSON.stringify(collectData())
+    body:   JSON.stringify(payload)
   })
   .finally(() => showStep('success'));
 }
- 
+
 // ──────────────────────────────────────────────────────────
 //  HELPERS
 // ──────────────────────────────────────────────────────────
@@ -1080,13 +1116,25 @@ function escHtml(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 function escAttr(s) { return escHtml(s); }
- 
+
 // ──────────────────────────────────────────────────────────
 //  INIT
 // ──────────────────────────────────────────────────────────
 buildHoursPicker();
 buildIndustryGrid();
+
+document.getElementById('f-photos').addEventListener('change', function () {
+  const MAX   = 10;
+  const count = this.files.length;
+  const el    = document.getElementById('photo-count');
+  if (count === 0) {
+    el.textContent = '';
+  } else if (count > MAX) {
+    el.textContent = MAX + ' photo(s) selected (only the first ' + MAX + ' will be sent — ' + count + ' were chosen).';
+  } else {
+    el.textContent = count + ' photo(s) selected.';
+  }
+});
 </script>
 </body>
 </html>
- 

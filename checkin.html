@@ -32,7 +32,7 @@
       background: var(--bg-alt); color: var(--body);
       line-height: 1.6; -webkit-font-smoothing: antialiased;
     }
- 
+
     /* ── NAV — copied from form.html ── */
     nav {
       position: sticky; top: 0; z-index: 100;
@@ -45,10 +45,10 @@
     .logo .dot { color: var(--green); }
     .nav-back { font-size: .8rem; color: var(--muted); text-decoration: none; font-weight: 500; }
     .nav-back:hover { color: var(--navy); }
- 
+
     /* ── LAYOUT ── */
     .wrap { max-width: 660px; margin: 0 auto; padding: 2rem 1rem 5rem; }
- 
+
     /* ── PAGE HEADER ── */
     .page-hd { margin-bottom: 1.75rem; }
     .eyebrow {
@@ -60,7 +60,7 @@
       letter-spacing: -.03em; margin-bottom: .4rem; line-height: 1.2;
     }
     .page-desc { font-size: .875rem; color: var(--muted); line-height: 1.65; }
- 
+
     /* ── CARDS — copied from form.html ── */
     .card {
       background: var(--white); border: 1px solid var(--border);
@@ -75,14 +75,14 @@
       font-size: .85rem; flex-shrink: 0;
     }
     .card-title { font-size: 1rem; font-weight: 800; color: var(--dark); letter-spacing: -.015em; }
- 
+
     /* ── FIELDS — copied from form.html ── */
     .field { margin-bottom: 1.25rem; }
     .field:last-child { margin-bottom: 0; }
     .lbl { display: block; font-size: .8rem; font-weight: 700; color: var(--body); margin-bottom: .4rem; }
     .req { color: var(--red); margin-left: 2px; }
     .hint { font-size: .775rem; color: var(--muted); margin-bottom: .45rem; line-height: 1.55; }
- 
+
     input[type="text"], input[type="email"], input[type="url"], input[type="date"],
     textarea, select {
       width: 100%; border: 1.5px solid var(--border); border-radius: 8px;
@@ -95,7 +95,7 @@
     }
     input.err, textarea.err { border-color: var(--red); }
     textarea { resize: vertical; min-height: 80px; line-height: 1.6; }
- 
+
     /* ── TOGGLE SWITCH ── */
     .toggle-wrap {
       display: flex; align-items: center;
@@ -123,7 +123,7 @@
       pointer-events: none; z-index: 1;
     }
     .tog input:checked ~ .tog-thumb { transform: translateX(18px); }
- 
+
     /* ── HOLIDAY QUICK-ADD CHIPS ── */
     .chips-wrap { margin-bottom: 1rem; }
     .chips-label {
@@ -144,7 +144,7 @@
       color: var(--green-dk); cursor: default; pointer-events: none;
     }
     .chip-date { color: var(--muted); font-weight: 400; }
- 
+
     /* ── REPEATABLE ENTRIES (hours + events) ── */
     .entries-list { display: flex; flex-direction: column; gap: .65rem; }
     .hours-entry, .event-entry {
@@ -165,14 +165,14 @@
       transition: all .15s; font-family: inherit; line-height: 1;
     }
     .entry-remove:hover { background: var(--red-bg); border-color: var(--red); color: var(--red); }
- 
+
     /* 2-column grid inside each entry; collapses to 1 on mobile */
     .entry-row {
       display: grid; grid-template-columns: 1fr 1fr;
       gap: .75rem; margin-bottom: .5rem;
     }
     .entry-row .field { margin-bottom: 0; }
- 
+
     /* Status radio buttons (Open / Closed all day) */
     .status-opts { display: flex; gap: .4rem; flex-wrap: wrap; }
     .status-opt {
@@ -185,7 +185,7 @@
     .status-opt.sel-open   { border-color: var(--green); background: var(--green-bg); color: var(--green-dk); }
     .status-opt.sel-closed { border-color: var(--red);   background: var(--red-bg);   color: #B91C1C; }
     .status-opt input { accent-color: var(--navy); width: 13px; height: 13px; cursor: pointer; }
- 
+
     /* Time range row — styled like form.html's .day-t inputs */
     .time-row {
       display: flex; align-items: center; gap: .5rem;
@@ -199,7 +199,7 @@
     }
     .time-row input[type="time"]:focus { border-color: var(--green); }
     .t-sep { font-size: .72rem; color: var(--muted); flex-shrink: 0; }
- 
+
     /* ── ADD BUTTON ── */
     .add-btn {
       display: inline-flex; align-items: center; gap: .4rem;
@@ -209,7 +209,7 @@
       font-size: .82rem; cursor: pointer; font-family: inherit; transition: all .15s;
     }
     .add-btn:hover { border-color: var(--navy); background: #EFF6FF; }
- 
+
     /* ── POST-ANGLE CHECKBOXES ── */
     .angles-grid { display: flex; flex-direction: column; gap: .35rem; }
     .angle-opt {
@@ -220,14 +220,14 @@
     .angle-opt:hover { border-color: #93C5FD; background: #F8FBFF; }
     .angle-opt.sel   { border-color: var(--navy); background: #EFF6FF; }
     .angle-opt input { accent-color: var(--navy); width: 14px; height: 14px; cursor: pointer; flex-shrink: 0; }
- 
+
     /* ── PHOTO REMINDER NOTE ── */
     .photo-note {
       background: #FFF7ED; border: 1.5px solid #FED7AA;
       border-radius: 8px; padding: .85rem 1rem;
       font-size: .83rem; color: #92400E; line-height: 1.6; margin-top: 1.25rem;
     }
- 
+
     /* ── SUBMIT ROW ── */
     .submit-row { margin-top: 1rem; }
     .btn-submit {
@@ -240,7 +240,7 @@
       box-shadow: 0 6px 20px rgba(34,197,94,.3);
     }
     .btn-submit:disabled { opacity: .55; cursor: not-allowed; }
- 
+
     /* ── ERROR BANNER — copied from form.html ── */
     .err-msg {
       display: none; background: var(--red-bg); border: 1px solid #FECACA;
@@ -248,7 +248,7 @@
       font-size: .82rem; color: #B91C1C; margin-top: .75rem; line-height: 1.5;
     }
     .err-msg.show { display: block; }
- 
+
     /* ── SUCCESS SCREEN — copied from form.html ── */
     .success-wrap { text-align: center; padding: 2.5rem 1rem; }
     .success-icon {
@@ -259,10 +259,10 @@
     .success-wrap h2 { font-size: 1.5rem; font-weight: 800; color: var(--dark); letter-spacing: -.02em; margin-bottom: .5rem; }
     .success-wrap p  { font-size: .875rem; color: var(--muted); line-height: 1.75; max-width: 420px; margin: 0 auto; }
     .success-wrap a  { display: inline-block; margin-top: 1.75rem; color: var(--navy); font-size: .875rem; font-weight: 700; text-decoration: underline; }
- 
+
     /* ── UTILITY ── */
     .hidden { display: none !important; }
- 
+
     /* ── RESPONSIVE — matching form.html breakpoints ── */
     @media (max-width: 580px) {
       .card { padding: 1.4rem; }
@@ -277,27 +277,27 @@
   </style>
 </head>
 <body>
- 
+
 <!-- ── NAVIGATION (matches form.html) ── -->
 <nav>
   <a href="index.html" class="logo">FrontDoor<span class="dot"> Profile</span></a>
   <a href="index.html" class="nav-back">← Back to home</a>
 </nav>
- 
+
 <div class="wrap">
- 
+
   <!-- ── PAGE HEADER ── -->
   <div class="page-hd" id="page-hd">
     <div class="eyebrow">Management Client Check-In</div>
     <h1 class="page-title">Your <span id="month-display">upcoming month</span> check-in</h1>
     <p class="page-desc">Two minutes to fill out — we'll handle the rest. Tell us what's happening so your profile stays accurate and active.</p>
   </div>
- 
+
   <!-- ══════════════════════════════════════════════
        MAIN FORM
   ══════════════════════════════════════════════ -->
   <div id="main-form">
- 
+
     <!-- ── CARD 1: CLIENT IDENTIFICATION ── -->
     <div class="card">
       <div class="card-hd">
@@ -317,14 +317,14 @@
         <input type="text" id="f-contact" placeholder="e.g. Mike Johnson" autocomplete="name">
       </div>
     </div>
- 
+
     <!-- ── CARD 2: HOLIDAY / SPECIAL HOURS ── -->
     <div class="card">
       <div class="card-hd">
         <div class="card-icon">🕐</div>
         <div class="card-title">Holiday &amp; Special Hours</div>
       </div>
- 
+
       <!-- Toggle default ON = same hours all month; toggle OFF = reveal the section below -->
       <div class="toggle-wrap" id="hours-toggle-wrap">
         <label for="hours-same">
@@ -336,10 +336,10 @@
           Our hours are the same as usual all month
         </label>
       </div>
- 
+
       <!-- Revealed when "hours-same" is unchecked -->
       <div id="hours-section" class="hidden">
- 
+
         <!-- Holiday quick-add chips — built by JS based on upcoming month -->
         <div id="chips-wrap" class="chips-wrap">
           <div class="chips-label">Quick-add holidays in <span id="chips-month-name"></span></div>
@@ -348,23 +348,23 @@
             Tap a holiday to pre-fill a date entry, then just choose Open or Closed.
           </p>
         </div>
- 
+
         <!-- Repeatable special-hours entries (added by chips or + button) -->
         <div class="entries-list" id="hours-entries"></div>
- 
+
         <button type="button" class="add-btn" onclick="addHoursEntry()">
           + Add a date
         </button>
       </div>
     </div>
- 
+
     <!-- ── CARD 3: UPCOMING EVENTS ── -->
     <div class="card">
       <div class="card-hd">
         <div class="card-icon">📅</div>
         <div class="card-title">Upcoming Events</div>
       </div>
- 
+
       <!-- Toggle default ON = no events; toggle OFF = reveal the section below -->
       <div class="toggle-wrap" id="events-toggle-wrap">
         <label for="no-events">
@@ -376,7 +376,7 @@
           No events planned this month
         </label>
       </div>
- 
+
       <!-- Revealed when "no-events" is unchecked -->
       <div id="events-section" class="hidden">
         <div class="entries-list" id="events-entries"></div>
@@ -385,42 +385,44 @@
         </button>
       </div>
     </div>
- 
+
     <!-- ── CARD 4: POST PREFERENCES ── -->
     <div class="card">
       <div class="card-hd">
         <div class="card-icon">✏️</div>
         <div class="card-title">Post Preferences</div>
       </div>
- 
+
       <div class="field">
         <label class="lbl" for="f-highlight">Anything to highlight this month?</label>
         <p class="hint">Promos, seasonal services, new offerings, milestones — anything you want front and center in your posts.</p>
         <textarea id="f-highlight" rows="3" placeholder="e.g. Running a 15% spring tune-up special all month. Also just added duct cleaning to our services."></textarea>
       </div>
- 
+
       <div class="field">
         <label class="lbl">Post angles to use this month</label>
         <p class="hint">All optional — just to spark ideas. Check any that feel relevant.</p>
         <div class="angles-grid" id="angles-grid"><!-- built by JS --></div>
       </div>
- 
+
       <div class="field">
         <label class="lbl" for="f-avoid">Anything we should NOT mention this month?</label>
         <input type="text" id="f-avoid" placeholder="e.g. Don't mention the renovation — the patio isn't open yet">
       </div>
- 
-      <div class="photo-note">
-        📸 <strong>New photos?</strong> Email them to <strong>info@frontdoorprofile.com</strong> any time.
-        Great options: new work, seasonal shots, team photos, before &amp; after results.
+
+      <div class="field">
+        <label class="lbl" for="f-photos">New Photos</label>
+        <input type="file" id="f-photos" accept="image/*" multiple style="margin-top:.4rem">
+        <p class="hint">Great options: new work, seasonal shots, team photos, before &amp; after results.</p>
+        <p id="photo-count" style="font-size:.85rem;color:var(--muted);margin-top:.3rem"></p>
       </div>
     </div>
- 
+
     <!-- Error banner -->
     <div class="err-msg" id="err-main">
       Please fill in your business name and email. If you've started a special-hours or event entry, make sure each one has at least a date (hours) or a name and date (events).
     </div>
- 
+
     <!-- Submit -->
     <div class="submit-row">
       <button type="button" class="btn-submit" id="submit-btn" onclick="submitForm()">
@@ -428,7 +430,7 @@
       </button>
     </div>
   </div><!-- /main-form -->
- 
+
   <!-- ══════════════════════════════════════════════
        SUCCESS SCREEN
   ══════════════════════════════════════════════ -->
@@ -437,13 +439,13 @@
       <div class="success-icon">✓</div>
       <h2>Got it — thanks!</h2>
       <p>We received your <strong id="success-month"></strong> check-in and will factor everything in as we prepare your posts, hours, and updates.</p>
-      <p style="margin-top:.75rem">If you have new photos to share, email them to <strong>info@frontdoorprofile.com</strong>.</p>
+      <p style="margin-top:.75rem">We've received your photos and details.</p>
       <a href="index.html">← Return to FrontDoor Profile</a>
     </div>
   </div>
- 
+
 </div><!-- /wrap -->
- 
+
 <script>
 // ╔══════════════════════════════════════════════════════════════════════╗
 // ║  ⚙  CONFIGURATION — EDIT THESE TWO THINGS BEFORE GOING LIVE        ║
@@ -457,9 +459,9 @@
 // ║     most commonly write for clients. They appear as checkboxes in    ║
 // ║     the "Post Preferences" card — all optional for the client.       ║
 // ╚══════════════════════════════════════════════════════════════════════╝
- 
+
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwn1jtdYtHArTyVr0BFnE70ftxHa6gtzrUJb3KO-ERSb8T_u9I_TuHXe4w9ulRwsJpW1A/exec';
- 
+
 const POST_ANGLES = [
   'Seasonal promotion or sale',
   'New service or product offering',
@@ -469,7 +471,7 @@ const POST_ANGLES = [
   'Before & after showcase',
   'Community or local event involvement',
 ];
- 
+
 // ──────────────────────────────────────────────────────────
 //  UPCOMING MONTH DETECTION
 //  "Upcoming" = the month after today's month.
@@ -483,21 +485,21 @@ const UPCOMING_Y     = UPCOMING.getFullYear();
 const MONTH_NAMES    = ['January','February','March','April','May','June',
                         'July','August','September','October','November','December'];
 const UPCOMING_LABEL = `${MONTH_NAMES[UPCOMING_M]} ${UPCOMING_Y}`; // e.g. "July 2026"
- 
+
 // Constrain date pickers to the upcoming month only
 const PAD2    = n => String(n).padStart(2, '0');
 const MM_STR  = PAD2(UPCOMING_M + 1);
 const LAST_DD = new Date(UPCOMING_Y, UPCOMING_M + 1, 0).getDate();
 const DATE_MIN = `${UPCOMING_Y}-${MM_STR}-01`;
 const DATE_MAX = `${UPCOMING_Y}-${MM_STR}-${PAD2(LAST_DD)}`;
- 
+
 // ──────────────────────────────────────────────────────────
 //  HOLIDAY ENGINE
 //  Produces an array of { name, date } objects for any given month/year.
 //  Covers all requested U.S. holidays including Easter, Mother's Day,
 //  and Father's Day computed from first principles (no external library).
 // ──────────────────────────────────────────────────────────
- 
+
 // Easter Sunday — Anonymous Gregorian algorithm
 function easterDate(year) {
   const a = year % 19, b = Math.floor(year / 100), c = year % 100;
@@ -511,7 +513,7 @@ function easterDate(year) {
   const day = ((h + l - 7 * m + 114) % 31) + 1;
   return new Date(year, mo, day);
 }
- 
+
 // Nth occurrence of a weekday (0 = Sun … 6 = Sat) in a month.
 // n > 0 → nth from start; n = -1 → last occurrence.
 function nthDow(year, month, dow, n) {
@@ -530,12 +532,12 @@ function nthDow(year, month, dow, n) {
   }
   return null;
 }
- 
+
 // Returns sorted array of holidays that fall in the given month (0-indexed).
 function getHolidays(year, month) {
   const out = [];
   const add = (name, day) => { if (day != null) out.push({ name, date: new Date(year, month, day) }); };
- 
+
   // Fixed-date holidays — [0-indexed month, day, name]
   [ [0,  1,  "New Year's Day"],
     [5,  19, "Juneteenth"],
@@ -545,7 +547,7 @@ function getHolidays(year, month) {
     [11, 25, "Christmas Day"],
     [11, 31, "New Year's Eve"] ]
     .forEach(([m, d, n]) => { if (m === month) add(n, d); });
- 
+
   // Floating holidays
   if (month === 0)  add("Martin Luther King Jr. Day",         nthDow(year, 0,  1, 3));   // 3rd Mon
   if (month === 1)  add("Presidents' Day",                    nthDow(year, 1,  1, 3));   // 3rd Mon
@@ -561,33 +563,33 @@ function getHolidays(year, month) {
     add("Thanksgiving",            t);
     add("Day After Thanksgiving",  t != null ? t + 1 : null);
   }
- 
+
   // Easter (can fall in March or April)
   const e = easterDate(year);
   if (e.getMonth() === month) add("Easter Sunday", e.getDate());
- 
+
   out.sort((a, b) => a.date - b.date);
   return out;
 }
- 
+
 // Converts a Date to YYYY-MM-DD string (what <input type="date"> expects)
 function toISODate(d) {
   return `${d.getFullYear()}-${PAD2(d.getMonth() + 1)}-${PAD2(d.getDate())}`;
 }
- 
+
 // Converts HH:MM (24 h) → 12-hour display string, e.g. "9:30 AM"
 function to12h(t) {
   if (!t) return '';
   const [h, m] = t.split(':').map(Number);
   return `${h % 12 || 12}:${PAD2(m)} ${h >= 12 ? 'PM' : 'AM'}`;
 }
- 
+
 // XSS-safe string helpers (same pattern as form.html)
 function escHtml(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 function escAttr(s) { return escHtml(s); }
- 
+
 // ──────────────────────────────────────────────────────────
 //  PAGE INIT — populate dynamic labels
 // ──────────────────────────────────────────────────────────
@@ -595,12 +597,12 @@ document.getElementById('month-display').textContent    = UPCOMING_LABEL;
 document.getElementById('chips-month-name').textContent = MONTH_NAMES[UPCOMING_M];
 document.getElementById('success-month').textContent    = UPCOMING_LABEL;
 document.title = `${MONTH_NAMES[UPCOMING_M]} Check-In — FrontDoor Profile`;
- 
+
 // Build holiday chips for the upcoming month
 const holidays = getHolidays(UPCOMING_Y, UPCOMING_M);
 const chipsWrap      = document.getElementById('chips-wrap');
 const chipsContainer = document.getElementById('chips-container');
- 
+
 if (holidays.length === 0) {
   // No major holidays this month — hide the chip section entirely
   chipsWrap.style.display = 'none';
@@ -618,7 +620,7 @@ if (holidays.length === 0) {
     chipsContainer.appendChild(btn);
   });
 }
- 
+
 // Build post-angle checkboxes from the POST_ANGLES config array
 const anglesGrid = document.getElementById('angles-grid');
 POST_ANGLES.forEach((angle, i) => {
@@ -630,7 +632,7 @@ POST_ANGLES.forEach((angle, i) => {
   });
   anglesGrid.appendChild(lbl);
 });
- 
+
 // ──────────────────────────────────────────────────────────
 //  TOGGLE HANDLERS
 //  "hours-same" checked  → same hours, section hidden, wrap green
@@ -642,7 +644,7 @@ document.getElementById('hours-same').addEventListener('change', function() {
   document.getElementById('hours-section').classList.toggle('hidden', same);
   document.getElementById('hours-toggle-wrap').classList.toggle('off', !same);
 });
- 
+
 document.getElementById('no-events').addEventListener('change', function() {
   const noEvt = this.checked;
   document.getElementById('events-section').classList.toggle('hidden', noEvt);
@@ -652,19 +654,19 @@ document.getElementById('no-events').addEventListener('change', function() {
     addEventEntry();
   }
 });
- 
+
 // ──────────────────────────────────────────────────────────
 //  SPECIAL HOURS ENTRIES
 // ──────────────────────────────────────────────────────────
 let hCount = 0; // increments for each entry to ensure unique IDs
- 
+
 function addHoursEntry(prefillDate = '', prefillLabel = '') {
   const id   = ++hCount;
   const list = document.getElementById('hours-entries');
   const div  = document.createElement('div');
   div.className = 'hours-entry';
   div.id = `he-${id}`;
- 
+
   div.innerHTML = `
     <button type="button" class="entry-remove" onclick="removeEntry('he-${id}')" title="Remove">×</button>
     ${prefillLabel ? `<div class="entry-label">${escHtml(prefillLabel)}</div>` : ''}
@@ -694,7 +696,7 @@ function addHoursEntry(prefillDate = '', prefillLabel = '') {
     </div>
   `;
   list.appendChild(div);
- 
+
   // Wire up status radio → visual highlighting + show/hide time row
   div.querySelectorAll(`input[name="hstatus-${id}"]`).forEach(radio => {
     radio.addEventListener('change', () => {
@@ -706,7 +708,7 @@ function addHoursEntry(prefillDate = '', prefillLabel = '') {
     });
   });
 }
- 
+
 // Called when a holiday chip is clicked — marks the chip as used and adds
 // a pre-filled entry so the client only needs to pick Open/Closed.
 function addHoursEntryFromChip(chip) {
@@ -717,19 +719,19 @@ function addHoursEntryFromChip(chip) {
   chip.innerHTML = `✓ ${escHtml(chip.dataset.name)} <span class="chip-date">${friendlyDate}</span>`;
   addHoursEntry(chip.dataset.date, chip.dataset.name);
 }
- 
+
 // ──────────────────────────────────────────────────────────
 //  EVENT ENTRIES
 // ──────────────────────────────────────────────────────────
 let evCount = 0;
- 
+
 function addEventEntry() {
   const id   = ++evCount;
   const list = document.getElementById('events-entries');
   const div  = document.createElement('div');
   div.className = 'event-entry';
   div.id = `ev-${id}`;
- 
+
   div.innerHTML = `
     <button type="button" class="entry-remove" onclick="removeEntry('ev-${id}')" title="Remove">×</button>
     <div class="entry-row">
@@ -759,12 +761,12 @@ function addEventEntry() {
   `;
   list.appendChild(div);
 }
- 
+
 function removeEntry(id) {
   const el = document.getElementById(id);
   if (el) el.remove();
 }
- 
+
 // ──────────────────────────────────────────────────────────
 //  COLLECT ALL FORM DATA
 //  Returns a clean JSON object ready for Apps Script.
@@ -772,7 +774,7 @@ function removeEntry(id) {
 //  you can easily filter "what's happening this week" in Sheets.
 // ──────────────────────────────────────────────────────────
 function collectData() {
- 
+
   // Special hours entries
   const specialHours = [];
   document.querySelectorAll('.hours-entry').forEach(entry => {
@@ -789,7 +791,7 @@ function collectData() {
       close:   status === 'open' ? to12h(document.getElementById(`hc-${id}`).value) : '',
     });
   });
- 
+
   // Events
   const events = [];
   document.querySelectorAll('.event-entry').forEach(entry => {
@@ -802,41 +804,41 @@ function collectData() {
       link:        (document.getElementById(`evlink-${id}`)?.value  ?? '').trim(),
     });
   });
- 
+
   // Post angles (checked boxes)
   const postAngles = [...document.querySelectorAll('input[name="angle"]:checked')]
     .map(i => i.value);
- 
+
   return {
     // ── Month context — use monthNumber + year to filter "this week" ──
     monthLabel:     UPCOMING_LABEL,          // "July 2026"
     monthNumber:    UPCOMING_M + 1,          // 1–12 (machine-readable)
     year:           UPCOMING_Y,
- 
+
     // ── Client identification ──
     businessName:   document.getElementById('f-biz').value.trim(),
     email:          document.getElementById('f-email').value.trim(),
     contactName:    document.getElementById('f-contact').value.trim(),
- 
+
     // ── Hours ──
     hoursUnchanged: document.getElementById('hours-same').checked,
     specialHours,   // [] when hoursUnchanged is true
- 
+
     // ── Events ──
     noEvents:       document.getElementById('no-events').checked,
     events,         // [] when noEvents is true
- 
+
     // ── Posts ──
     postHighlights: document.getElementById('f-highlight').value.trim(),
     postAngles,
     doNotMention:   document.getElementById('f-avoid').value.trim(),
- 
+
     // ── Meta ──
     formType:       'monthly',
     submittedAt:    new Date().toISOString(),
   };
 }
- 
+
 // ──────────────────────────────────────────────────────────
 //  VALIDATION
 //  Keeps the same lightweight approach as form.html:
@@ -846,7 +848,7 @@ function validate() {
   const errEl = document.getElementById('err-main');
   errEl.classList.remove('show');
   let ok = true;
- 
+
   // Business name + email are required
   ['f-biz', 'f-email'].forEach(id => {
     const el    = document.getElementById(id);
@@ -854,7 +856,7 @@ function validate() {
     el.classList.toggle('err', empty);
     if (empty) ok = false;
   });
- 
+
   // Special hours: if the section is open, each entry needs a date
   if (!document.getElementById('hours-same').checked) {
     document.querySelectorAll('.hours-entry').forEach(entry => {
@@ -864,7 +866,7 @@ function validate() {
       else dateEl.classList.remove('err');
     });
   }
- 
+
   // Events: if the section is open, each entry needs at least a name AND a date
   if (!document.getElementById('no-events').checked) {
     document.querySelectorAll('.event-entry').forEach(entry => {
@@ -877,33 +879,67 @@ function validate() {
       else dateEl.classList.remove('err');
     });
   }
- 
+
   if (!ok) errEl.classList.add('show');
   return ok;
 }
- 
+
 // ──────────────────────────────────────────────────────────
 //  SUBMIT — identical pattern to form.html
 // ──────────────────────────────────────────────────────────
-function submitForm() {
+function compressImage(file) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onerror = () => { URL.revokeObjectURL(url); resolve(null); };
+    img.onload  = () => {
+      URL.revokeObjectURL(url);
+      const MAX = 1600;
+      let w = img.naturalWidth, h = img.naturalHeight;
+      if (w > MAX || h > MAX) {
+        if (w >= h) { h = Math.round(h * MAX / w); w = MAX; }
+        else        { w = Math.round(w * MAX / h); h = MAX; }
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      const dataURL    = canvas.toDataURL('image/jpeg', 0.8);
+      const dataBase64 = dataURL.split(',')[1];  // strip "data:image/jpeg;base64,"
+      resolve({ name: file.name, mimeType: 'image/jpeg', dataBase64 });
+    };
+    img.src = url;
+  });
+}
+
+async function submitForm() {
   if (!validate()) return;
- 
+
   // Remind the owner to set SCRIPT_URL before sharing with clients
   if (SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL_HERE') {
     alert('Almost ready! Replace SCRIPT_URL at the top of the <script> block with your Google Apps Script Web App URL before sending this form to clients.');
     return;
   }
- 
+
   const btn = document.getElementById('submit-btn');
   btn.textContent = 'Submitting…';
   btn.disabled    = true;
- 
+
+  const fileInput = document.getElementById('f-photos');
+  const files     = fileInput ? Array.from(fileInput.files).slice(0, 10) : [];
+  const results   = await Promise.allSettled(files.map(compressImage));
+  const photos    = results
+    .filter(r => r.status === 'fulfilled' && r.value !== null)
+    .map(r => r.value);
+
+  const payload  = collectData();
+  payload.photos = photos;
+
   // mode: 'no-cors' matches form.html — no response body comes back,
   // so we show success in .finally() regardless of network outcome.
   fetch(SCRIPT_URL, {
     method: 'POST',
     mode:   'no-cors',
-    body:   JSON.stringify(collectData()),
+    body:   JSON.stringify(payload),
   })
   .finally(() => {
     document.getElementById('page-hd').classList.add('hidden');
@@ -912,7 +948,19 @@ function submitForm() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+document.getElementById('f-photos').addEventListener('change', function () {
+  const MAX   = 10;
+  const count = this.files.length;
+  const el    = document.getElementById('photo-count');
+  if (count === 0) {
+    el.textContent = '';
+  } else if (count > MAX) {
+    el.textContent = MAX + ' photo(s) selected (only the first ' + MAX + ' will be sent — ' + count + ' were chosen).';
+  } else {
+    el.textContent = count + ' photo(s) selected.';
+  }
+});
 </script>
 </body>
 </html>
- 
