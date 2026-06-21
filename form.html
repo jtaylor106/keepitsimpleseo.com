@@ -390,7 +390,7 @@
       <div class="step-desc">Just a few more things to help your profile stand out from the competition.</div>
 
       <div class="field">
-        <label class="lbl" for="f-diff">What makes your business stand out from competitors in your area? <span class="req">*</span></label>
+        <label class="lbl" for="f-diff">What makes your business stand out from competitors in your area? (optional)</label>
         <p class="hint">This is your chance to brag! Tell us what your customers love about you, what you do better, or what makes your approach unique.</p>
         <textarea id="f-diff" rows="4" placeholder="e.g. We're the only plumber in Springfield with a same-day guarantee — if we can't fix it same-day, the service call is free. Customers love that we call ahead, show up on time, and clean up completely."></textarea>
       </div>
@@ -465,7 +465,7 @@
       </div>
     </div>
 
-    <div class="err-msg" id="err-4">Please fill in your differentiator and select a plan before submitting.</div>
+    <div class="err-msg" id="err-4">Please select a plan before submitting.</div>
     <div class="form-nav">
       <button class="btn btn-ghost" onclick="prevStep(4)">← Back</button>
       <button class="btn btn-submit" id="submit-btn" onclick="submitForm()">Submit Questionnaire →</button>
@@ -1034,9 +1034,7 @@ function validate(step) {
     return true;
   }
   if (step === 4) {
-    const diff = document.getElementById('f-diff');
-    const ok = diff.value.trim() && document.querySelector('input[name="plan"]:checked');
-    diff.classList.toggle('err', !diff.value.trim());
+    const ok = document.querySelector('input[name="plan"]:checked');
     if (!ok) { showErr(4); return false; }
     return true;
   }

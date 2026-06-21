@@ -749,18 +749,26 @@ function addEventEntry() {
         <input type="text" id="evname-${id}" placeholder="e.g. Customer Appreciation Night">
       </div>
       <div class="field">
-        <label class="lbl" for="evdate-${id}">Date <span class="req">*</span></label>
+        <label class="lbl" for="evdate-${id}">Start Date <span class="req">*</span></label>
         <input type="date" id="evdate-${id}" min="${DATE_MIN}" max="${DATE_MAX}">
       </div>
     </div>
     <div class="entry-row">
       <div class="field">
-        <label class="lbl" for="evtime-${id}">Time</label>
-        <input type="text" id="evtime-${id}" placeholder="e.g. 6:00 – 9:00 PM">
+        <label class="lbl" for="evenddate-${id}">End Date (optional)</label>
+        <input type="date" id="evenddate-${id}" min="${DATE_MIN}" max="${DATE_MAX}">
       </div>
       <div class="field">
         <label class="lbl" for="evlink-${id}">Link (optional)</label>
         <input type="url" id="evlink-${id}" placeholder="https://...">
+      </div>
+    </div>
+    <div class="field" style="margin-bottom:.5rem">
+      <label class="lbl">Time (optional)</label>
+      <div class="time-row">
+        <input type="time" id="evstime-${id}" aria-label="Event start time">
+        <span class="t-sep">to</span>
+        <input type="time" id="evetime-${id}" aria-label="Event end time">
       </div>
     </div>
     <div class="field" style="margin-bottom:.5rem">
@@ -806,11 +814,13 @@ function collectData() {
   document.querySelectorAll('.event-entry').forEach(entry => {
     const id = entry.id.replace('ev-', '');
     events.push({
-      name:        (document.getElementById(`evname-${id}`)?.value  ?? '').trim(),
-      date:         document.getElementById(`evdate-${id}`)?.value  ?? '',  // YYYY-MM-DD
-      time:        (document.getElementById(`evtime-${id}`)?.value  ?? '').trim(),
-      description: (document.getElementById(`evdesc-${id}`)?.value  ?? '').trim(),
-      link:        (document.getElementById(`evlink-${id}`)?.value  ?? '').trim(),
+      name:        (document.getElementById(`evname-${id}`)?.value     ?? '').trim(),
+      startDate:    document.getElementById(`evdate-${id}`)?.value     ?? '',  // YYYY-MM-DD
+      endDate:      document.getElementById(`evenddate-${id}`)?.value  ?? '',  // YYYY-MM-DD or ''
+      startTime:   to12h(document.getElementById(`evstime-${id}`)?.value ?? ''),  // '' if blank
+      endTime:     to12h(document.getElementById(`evetime-${id}`)?.value ?? ''),  // '' if blank
+      description: (document.getElementById(`evdesc-${id}`)?.value     ?? '').trim(),
+      link:        (document.getElementById(`evlink-${id}`)?.value     ?? '').trim(),
     });
   });
 
