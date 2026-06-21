@@ -298,6 +298,12 @@
   ══════════════════════════════════════════════ -->
   <div id="main-form">
 
+    <!-- Honeypot — invisible to humans, catches bots that auto-fill every input. Do not remove. -->
+    <div style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+      <label for="f-honeypot">Company Website</label>
+      <input type="text" id="f-honeypot" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    </div>
+
     <!-- ── CARD 1: CLIENT IDENTIFICATION ── -->
     <div class="card">
       <div class="card-hd">
@@ -457,6 +463,13 @@
 // ╚══════════════════════════════════════════════════════════════════════╝
 
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxLPE2fmB_7x8bBeuK3UFV1uOusZolMT_OXbYLqpK6dvsuvP6sQGrWXoUJ5BEttVPxIQw/exec';
+
+// Client-side caps — these block submission with a visible error so a real
+// user knows what happened. The Apps Script backend mirrors both caps as a
+// silent server-side backstop (truncates instead of erroring, since a bot
+// hitting the endpoint directly never sees this page or its error messages).
+const MAX_PHOTOS   = 10;   // matches the existing slice(0, 10) below
+const MAX_TEXT_LEN = 5000; // generous per-field cap (~800–1000 words)
 
 const POST_ANGLES = [
   'Seasonal promotion or sale',
@@ -832,6 +845,7 @@ function collectData() {
     // ── Meta ──
     formType:       'monthly',
     submittedAt:    new Date().toISOString(),
+    companyWebsite: document.getElementById('f-honeypot').value, // honeypot — should always be empty
   };
 }
 
@@ -916,18 +930,35 @@ async function submitForm() {
     return;
   }
 
+  const fileInput = document.getElementById('f-photos');
+  const allFiles  = fileInput ? Array.from(fileInput.files) : [];
+
+  // Visible guard: photo count. Blocks submission instead of silently
+  // truncating, so the person knows to remove photos before resubmitting.
+  if (allFiles.length > MAX_PHOTOS) {
+    showPhotoCountMsg(allFiles.length, true);
+    fileInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
+  const payload = collectData();
+
+  // Visible guard: free-text length, checked on every string field before
+  // photos are attached (photo data is intentionally large base64 text).
+  const overLong = findOverLengthField(payload);
+  if (overLong) {
+    alert('"' + overLong + '" is too long (over ' + MAX_TEXT_LEN + ' characters). Please shorten it and try again.');
+    return;
+  }
+
   const btn = document.getElementById('submit-btn');
   btn.textContent = 'Submitting…';
   btn.disabled    = true;
 
-  const fileInput = document.getElementById('f-photos');
-  const files     = fileInput ? Array.from(fileInput.files).slice(0, 10) : [];
-  const results   = await Promise.allSettled(files.map(compressImage));
+  const results   = await Promise.allSettled(allFiles.map(compressImage));
   const photos    = results
     .filter(r => r.status === 'fulfilled' && r.value !== null)
     .map(r => r.value);
-
-  const payload  = collectData();
   payload.photos = photos;
 
   // mode: 'no-cors' matches form.html — no response body comes back,
@@ -945,17 +976,52 @@ async function submitForm() {
   });
 }
 
-document.getElementById('f-photos').addEventListener('change', function () {
-  const MAX   = 10;
-  const count = this.files.length;
-  const el    = document.getElementById('photo-count');
+// ──────────────────────────────────────────────────────────
+//  CLIENT-SIDE VALIDATION HELPERS (mirror server-side caps)
+// ──────────────────────────────────────────────────────────
+// Recursively scans an object/array for any string value longer than
+// MAX_TEXT_LEN and returns a label identifying it (e.g. "postHighlights" or
+// "events[0].description"), or null if none found. Generic by design so
+// every free-text field is covered, including nested event/special-hours entries.
+function findOverLengthField(val, path) {
+  path = path || '';
+  if (typeof val === 'string') {
+    return val.length > MAX_TEXT_LEN ? (path || 'this field') : null;
+  }
+  if (Array.isArray(val)) {
+    for (let i = 0; i < val.length; i++) {
+      const hit = findOverLengthField(val[i], path + '[' + i + ']');
+      if (hit) return hit;
+    }
+    return null;
+  }
+  if (val && typeof val === 'object') {
+    for (const k in val) {
+      if (!Object.prototype.hasOwnProperty.call(val, k)) continue;
+      const hit = findOverLengthField(val[k], path ? path + '.' + k : k);
+      if (hit) return hit;
+    }
+    return null;
+  }
+  return null;
+}
+
+function showPhotoCountMsg(count, isError) {
+  const el = document.getElementById('photo-count');
   if (count === 0) {
     el.textContent = '';
-  } else if (count > MAX) {
-    el.textContent = MAX + ' photo(s) selected (only the first ' + MAX + ' will be sent — ' + count + ' were chosen).';
+    el.style.color = '';
+  } else if (isError) {
+    el.textContent = count + ' photo(s) selected — please remove ' + (count - MAX_PHOTOS) + ' to stay at ' + MAX_PHOTOS + ' or fewer.';
+    el.style.color = 'var(--red)';
   } else {
     el.textContent = count + ' photo(s) selected.';
+    el.style.color = '';
   }
+}
+
+document.getElementById('f-photos').addEventListener('change', function () {
+  showPhotoCountMsg(this.files.length, this.files.length > MAX_PHOTOS);
 });
 </script>
 </body>
