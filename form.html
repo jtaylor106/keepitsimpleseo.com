@@ -409,6 +409,7 @@
         <input type="file" id="f-photos" accept="image/*" multiple style="margin-top:.4rem">
         <p class="hint">Great options: exterior of your location or work vehicle, your work in action, team photos, before &amp; after shots, products you sell.</p>
         <p id="photo-count" style="font-size:.85rem;color:var(--muted);margin-top:.3rem"></p>
+        <div class="err-msg" id="err-photos">At least one photo is required to submit — your profile build can't begin without photos.</div>
       </div>
 
       <!-- PLAN SELECTION -->
@@ -1153,6 +1154,16 @@ async function submitForm() {
   }
 
   const btn = document.getElementById('submit-btn');
+
+  // Photo gate (D1 / spec Step 1): ≥1 photo required before submit.
+  // Must be client-side — the no-cors layer hides server errors from the submitter.
+  // Gate runs here, before btn.disabled = true, so a failure leaves the form fully usable.
+  if (document.getElementById('f-photos').files.length < 1) {
+    document.getElementById('err-photos').classList.add('show');
+    return;
+  }
+  document.getElementById('err-photos').classList.remove('show');
+
   btn.textContent = 'Submitting…'; btn.disabled = true;
 
   const fileInput = document.getElementById('f-photos');
@@ -1211,6 +1222,8 @@ buildHoursPicker();
 buildIndustryGrid();
 
 document.getElementById('f-photos').addEventListener('change', function () {
+  // Clear the photo-required error as soon as the user selects a file
+  document.getElementById('err-photos').classList.remove('show');
   const MAX   = 10;
   const count = this.files.length;
   const el    = document.getElementById('photo-count');
