@@ -460,9 +460,14 @@
         <label class="lbl" for="f-otherbiz">If you selected "Other" for business type, describe your business:</label>
         <input type="text" id="f-otherbiz" placeholder="e.g. Custom furniture maker, pet photographer, etc.">
       </div>
-      <div class="field" style="margin-bottom:0">
+      <div class="field">
         <label class="lbl" for="f-extra">Anything else we should know about your business?</label>
         <textarea id="f-extra" rows="3" placeholder="Any other details that would help us set up your profile…"></textarea>
+      </div>
+      <div class="field" style="margin-bottom:0">
+        <label class="lbl" for="f-questions">Any questions about the process?</label>
+        <p class="hint">Have a question before we get started? Ask here and we'll answer it when we send your service agreement and payment link.</p>
+        <textarea id="f-questions" rows="3" placeholder="e.g. How long does setup take? What happens after I pay?"></textarea>
       </div>
     </div>
 
@@ -1102,6 +1107,7 @@ function collectData() {
     hearAbout:      document.getElementById('f-hear').value,
     otherBusiness:  (() => { const w = document.getElementById('otherbiz-wrap'); return (w && w.style.display !== 'none') ? document.getElementById('f-otherbiz').value.trim() : ''; })(),
     additionalInfo: document.getElementById('f-extra').value.trim(),
+    clientQuestions: document.getElementById('f-questions').value.trim(),
     googleListingStatus: (document.querySelector('input[name="listingstatus"]:checked') || {}).value || '',
     googleAccountStatus: (document.querySelector('input[name="gacct"]:checked') || {}).value || '',
     googleAccountEmail: document.getElementById('f-gacct-email').value.trim(),
