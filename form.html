@@ -156,6 +156,9 @@
     }
     .day-t input[type="time"]:focus { border-color: var(--green); }
     .t-sep { font-size: .72rem; color: var(--muted); flex-shrink: 0; }
+    .day-24 { display: none; align-items: center; gap: .3rem; font-size: .75rem; color: var(--body); font-weight: 600; flex-shrink: 0; cursor: pointer; white-space: nowrap; }
+    .day-24.show { display: flex; }
+    .day-24 input[type="checkbox"] { width: 14px; height: 14px; accent-color: var(--green); cursor: pointer; }
 
     /* ── PLAN CARDS ── */
     .plan-opt {
@@ -517,8 +520,8 @@ const INDUSTRIES = [
     questions: [
       {q:'What type of cuisine do you serve?', type:'text'},
       {q:'Do you serve alcohol?', type:'mc', opts:['Yes — Full Bar','Beer & Wine Only','No']},
-      {q:'Do you accept reservations?', type:'mc', opts:['Yes','No — Walk-Ins Only','Preferred but not required']},
-      {q:'List your top 5–8 signature dishes or menu items:', type:'para'},
+      {q:'Do you accept reservations?', type:'mc', opts:['Yes','No — Walk-Ins Only']},
+      {q:'List your top 3 signature dishes or menu items:', type:'para'},
       {q:'Link to your online menu (PDF or webpage or upload as photo):', type:'text'},
       {q:'Which delivery apps are you on? Paste your store links (DoorDash / Uber Eats / Grubhub):', type:'para'}
     ]
@@ -822,9 +825,11 @@ function buildHoursPicker() {
         `<input type="time" id="do-${id}" value="09:00" aria-label="${label} open time">` +
         `<span class="t-sep">to</span>` +
         `<input type="time" id="dc-${id}" value="17:00" aria-label="${label} close time">` +
-      `</div>`;
+      `</div>` +
+      `<label class="day-24" id="d24-${id}"><input type="checkbox" id="dch24-${id}"> 24 hrs</label>`;
     wrap.appendChild(row);
     row.querySelector('.day-chk').addEventListener('change', () => toggleDay(id));
+    row.querySelector('#dch24-' + id).addEventListener('change', () => update24Visibility(id));
   });
 }
 
@@ -832,7 +837,15 @@ function toggleDay(id) {
   const open = document.getElementById('dchk-' + id).checked;
   document.getElementById('drow-' + id).classList.toggle('open', open);
   document.getElementById('dcl-'  + id).style.display = open ? 'none' : '';
-  document.getElementById('dt-'   + id).classList.toggle('show', open);
+  document.getElementById('d24-'  + id).classList.toggle('show', open);
+  if (!open) document.getElementById('dch24-' + id).checked = false;
+  update24Visibility(id);
+}
+
+function update24Visibility(id) {
+  const open = document.getElementById('dchk-'  + id).checked;
+  const is24 = document.getElementById('dch24-' + id).checked;
+  document.getElementById('dt-' + id).classList.toggle('show', open && !is24);
 }
 
 function to12h(t) {
@@ -1059,10 +1072,13 @@ function collectData() {
   const hours = {};
   DAYS.forEach(({id}) => {
     const open = document.getElementById('dchk-' + id).checked;
-    hours[id] = {
-      open:  open ? to12h(document.getElementById('do-' + id).value) : '',
-      close: open ? to12h(document.getElementById('dc-' + id).value) : ''
-    };
+    const is24 = document.getElementById('dch24-' + id).checked;
+    hours[id] = open
+      ? (is24
+          ? { open: 'Open 24 hours', close: '' }
+          : { open:  to12h(document.getElementById('do-' + id).value),
+              close: to12h(document.getElementById('dc-' + id).value) })
+      : { open: '', close: '' };
   });
 
   // Services (checked items)
